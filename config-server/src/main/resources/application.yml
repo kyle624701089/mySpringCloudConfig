@@ -1,14 +1,19 @@
 spring:
   application:
+#    服务名称
     name: config-server
   cloud:
     config:
       server:
         git:
+#          配置中心对应的git地址
           uri: https://github.com/kyle624701089/springCloudConfig
+#          配置仓库路径 https://github.com/kyle624701089/springCloudConfig/respo  下面存放配置文件
           search-paths: respo
+#          对应的GitHub账号密码(公共库不用写，私有库才需要)
           username:
           password:
+#            配置文件所在的分支或者主干
       label: master
 server:
-  port: 8090
+  port: 8888
